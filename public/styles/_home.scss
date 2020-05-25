@@ -1,0 +1,57 @@
+.main-head {
+  width: 95%;
+  background-color: whitesmoke;
+  margin: auto;
+  padding: 0rem 3rem;
+}
+
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  padding: 1rem;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+    h1 {
+      margin-left: 1rem;
+    }
+  }
+  ul {
+    @include flex(space-evenly, center, row);
+    flex: 1 1 30rem;
+  }
+}
+
+.home {
+  @include flex(center, center, row);
+  width: 95%;
+  margin: auto;
+  min-height: 90vh;
+  flex-wrap: wrap;
+  overflow: hidden;
+  .home-image {
+    flex: 2 2 70rem;
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+.hero-text {
+  @include flex(center, left, column);
+  flex: 1 1 60rem;
+  padding-left: 20rem;
+}
+
+.home-social {
+  flex: 1 1 10rem;
+  margin-top: 4rem;
+  a {
+    margin-right: 5rem;
+    img {
+      width: 67px;
+      height: 67px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+$header1: 3rem;
+$header2: 3.5rem;
+$header3: 4rem;
+$header4: 5rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #00c01a, #9e9e9e);
+$background-color: #6c6c6c;
+$black-text: #12121f;
+$white-text: white;
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+h1 {
+  font-size: $header1;
+}
+h2 {
+  font-size: $header2;
+}
+h3 {
+  font-size: $header3;
+}
+h4 {
+  font-size: $header4;
+}
+
+ul {
+  list-style: none;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: $text;
+}
+
+a {
+  text-decoration: none;
+  color: $black-text;
+}
