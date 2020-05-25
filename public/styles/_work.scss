@@ -1,0 +1,33 @@
+.work {
+  min-height: 100vh;
+  position: relative;
+  @include flex(space-between, flex-start, column);
+  overflow: hidden;
+}
+
+.work-caption,
+.work-caption-block {
+  position: absolute;
+  max-width: 30%;
+  min-width: 494px;
+  height: $header4;
+  top: 10%;
+  left: 5%;
+  padding: 0.5rem;
+}
+
+.work-caption {
+  color: $white-text;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.work-caption-block {
+  background-color: $background-color;
+  z-index: 0;
+}
+
+#particles-js {
+  min-height: 100%;
+  background-color: black;
+}

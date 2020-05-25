@@ -183,4 +183,55 @@ nav ul {
   width: 67px;
   height: 67px;
 }
+
+/*Cursor*/
+.txt-type > .txt {
+  border-right: 0.2rem solid black;
+}
+
+.work {
+  min-height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.work-caption,
+.work-caption-block {
+  position: absolute;
+  max-width: 30%;
+  min-width: 494px;
+  height: 5rem;
+  top: 10%;
+  left: 5%;
+  padding: 0.5rem;
+}
+
+.work-caption {
+  color: white;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.work-caption-block {
+  background-color: #6c6c6c;
+  z-index: 0;
+}
+
+#particles-js {
+  min-height: 100%;
+  background-color: black;
+}
 /*# sourceMappingURL=style.css.map */
