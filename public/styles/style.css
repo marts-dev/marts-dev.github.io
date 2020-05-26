@@ -49,7 +49,6 @@ a {
 
 .main-head {
   width: 95%;
-  background-color: whitesmoke;
   margin: auto;
   padding: 0rem 3rem;
 }
@@ -114,6 +113,13 @@ nav ul {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30rem;
           flex: 1 1 30rem;
+}
+
+.active {
+  background: #6c6c6c;
+  color: whitesmoke;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 
 .home {
@@ -190,7 +196,7 @@ nav ul {
 }
 
 .work {
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,8 +236,44 @@ nav ul {
   z-index: 0;
 }
 
+.work-images {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  top: 25%;
+  padding: 0rem 20rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.work-images .sample {
+  margin: 2rem 0rem;
+  width: 390px;
+  min-width: 250px;
+  border-radius: 3.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.work-images .sample:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 #particles-js {
-  min-height: 100%;
+  height: 90vh;
+  min-height: 90vh;
   background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
