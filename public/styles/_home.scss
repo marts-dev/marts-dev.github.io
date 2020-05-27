@@ -35,3 +35,22 @@
 .txt-type > .txt {
   border-right: 0.2rem solid black;
 }
+
+#SmallBlueStars {
+  opacity: 1;
+  animation: twinkle 2s linear 1s infinite alternate;
+}
+
+#RedStars {
+  opacity: 1;
+  animation: twinkle 1s linear 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
