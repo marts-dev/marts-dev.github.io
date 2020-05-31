@@ -57,9 +57,11 @@
 
 @media screen and (max-width: 680px) {
   .hero-text {
-    @include flex(flex-start, center, column);
+    @include flex(flex-start, left, column);
+    position: absolute;
+    top: 20%;
     flex: 1 1 60rem;
-    padding: 0;
+    padding: 2rem;
   }
 
   .home-social {
@@ -82,15 +84,5 @@
     svg {
       width: 100%;
     }
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .hero-text {
-    @include flex(flex-start, left, column);
-    position: absolute;
-    top: 20%;
-    flex: 1 1 60rem;
-    padding: 2rem;
   }
 }
