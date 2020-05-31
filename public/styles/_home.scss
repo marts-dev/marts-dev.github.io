@@ -84,3 +84,13 @@
     }
   }
 }
+
+@media screen and (max-width: 300px) {
+  .hero-text {
+    @include flex(flex-start, left, column);
+    position: absolute;
+    top: 20%;
+    flex: 1 1 60rem;
+    padding: 2rem;
+  }
+}

@@ -127,3 +127,30 @@
     }
   }
 }
+
+@media screen and (max-width: 300px) {
+  .work-images {
+    display: none;
+  }
+  .work-caption {
+    word-wrap: break-word;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    color: $white-text;
+  }
+  .resume {
+    position: absolute;
+    @include flex(center, center, column);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    img {
+      width: 5rem;
+    }
+    h1 {
+      color: $white-text;
+    }
+  }
+}
