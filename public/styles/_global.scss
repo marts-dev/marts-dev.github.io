@@ -70,6 +70,7 @@ nav {
   min-height: 10vh;
   padding: 1rem;
   flex-wrap: wrap;
+  z-index: 4;
   .logo {
     @include flex(flex-start, center, row);
     flex: 1 1 10rem;
@@ -88,4 +89,48 @@ nav {
   color: whitesmoke;
   padding: 1rem 2rem;
   border-radius: 1rem;
+}
+
+@media screen and (max-width: 680px) {
+  $header1: 2.5rem;
+  $header2: 3rem;
+  $header3: 3.5rem;
+  $header4: 4rem;
+  $text: 2rem;
+  h1 {
+    font-size: $header1;
+  }
+  h2 {
+    font-size: $header2;
+  }
+  h3 {
+    font-size: $header3;
+  }
+  h4 {
+    font-size: $header4;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li,
+  button,
+  label,
+  input,
+  a,
+  p {
+    font-size: $text;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black-text;
+  }
+
+  .main-head {
+    width: 95%;
+    margin: auto;
+    padding: 0rem 3rem;
+  }
 }

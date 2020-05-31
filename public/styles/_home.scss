@@ -4,12 +4,12 @@
   margin: auto;
   min-height: 90vh;
   flex-wrap: wrap;
-  overflow: hidden;
-  .home-image {
-    flex: 2 2 70rem;
-    svg {
-      width: 100%;
-    }
+}
+
+.home-image {
+  flex: 2 2 70rem;
+  svg {
+    width: 100%;
   }
 }
 
@@ -52,5 +52,35 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .hero-text {
+    @include flex(flex-start, center, column);
+    flex: 1 1 60rem;
+    padding: 0;
+  }
+
+  .home-social {
+    flex: 1 1 10rem;
+    margin-top: 4rem;
+    a {
+      margin-right: 5rem;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .home-image {
+    position: absolute;
+    z-index: -1;
+    flex: 2 2 70rem;
+    height: 90vh;
+    svg {
+      width: 100%;
+    }
   }
 }
