@@ -281,6 +281,7 @@ nav ul {
         -ms-flex: 1 1 60rem;
             flex: 1 1 60rem;
     padding: 2rem;
+    z-index: -1;
   }
   .home-social {
     -webkit-box-flex: 1;
