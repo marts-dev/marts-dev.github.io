@@ -438,7 +438,6 @@ nav ul {
   height: 90vh;
   min-height: 90vh;
   background-color: black;
-  z-index: -2;
 }
 
 @media screen and (max-width: 1700px) {
