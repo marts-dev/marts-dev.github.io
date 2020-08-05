@@ -59,7 +59,6 @@ a {
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  overflow: hidden;
 }
 
 nav {
@@ -423,6 +422,7 @@ nav ul {
 }
 
 .carousel-slide img {
+  padding: 0 10%;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
