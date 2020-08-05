@@ -6,10 +6,13 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background-color: black;
+  color: whitesmoke;
 }
 
 $header1: 3rem;
@@ -17,7 +20,7 @@ $header2: 3.5rem;
 $header3: 4rem;
 $header4: 5rem;
 $text: 2.5rem;
-$gradient: linear-gradient(left, #00c01a, #9e9e9e);
+$gradient: linear-gradient( to left, #ffffff55, #ffffff00);
 $background-color: #6c6c6c;
 $black-text: black;
 $white-text: white;
@@ -56,13 +59,18 @@ p {
 
 a {
   text-decoration: none;
-  color: $black-text;
+  color: $white-text;
 }
 
 .main-head {
-  width: 95%;
-  margin: auto;
+  width: 100%;
   padding: 0rem 3rem;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
 nav {
@@ -110,27 +118,10 @@ nav {
     font-size: $header4;
   }
 
-  ul {
-    list-style: none;
-  }
-
-  li,
-  button,
-  label,
-  input,
-  a,
-  p {
-    font-size: $text;
-  }
-
-  a {
-    text-decoration: none;
-    color: $black-text;
-  }
-
   .main-head {
-    width: 95%;
+    width: 100%;
     margin: auto;
     padding: 0rem 3rem;
+    height: 10vh;
   }
 }
