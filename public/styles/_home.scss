@@ -7,11 +7,18 @@
   margin: auto;
   margin-top: 10vh;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content auto;
 }
 
 .hero-text {
   grid-column: 1 / span 3;
-  padding-left: 20rem;
+  padding: 5rem 15rem;
+}
+
+.hero-subtext {
+  grid-column: 1 / span 1;
+  grid-row: 2;
+  padding: 5rem 15rem;
 }
 
 .home-social {
@@ -106,13 +113,31 @@
 }
 
 @media screen and (max-width: 680px) {
-  .hero-text {
-    @include flex(flex-start, left, column);
-    position: absolute;
+  .home {
+    //@include flex(center, center, row);
+    display: grid;
+    width: 95%;
+    min-height: 90vh;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 10vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content auto;
+  }
+  .hero-text{
+    /*@include flex(flex-start, left, column);*/
+    /*position: absolute;*/
     top: 20%;
-    flex: 1 1 60rem;
+    grid-row: 1;
+    /*flex: 1 1 60rem;*/
     padding: 2rem;
     z-index: -1;
+  }
+
+  .hero-subtext {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+    padding: 5rem 15rem;
   }
 
   .home-image {

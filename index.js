@@ -56,7 +56,7 @@ function init() {
   //INit typeWriter
   new TypeWriter(textElement, words, wait);
   const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
+const carouselImages = document.querySelectorAll('.carousel-slide>img');
 
 //Buttons
 const prevBtn = document.querySelector("#prevBtn");
