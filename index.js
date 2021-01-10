@@ -55,69 +55,29 @@ function init() {
   const wait = JSON.parse(textElement.getAttribute("data-wait"));
   //INit typeWriter
   new TypeWriter(textElement, words, wait);
-  const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide>img');
-
-//Buttons
-const prevBtn = document.querySelector("#prevBtn");
-const nextBtn = document.querySelector("#nextBtn");
-
-//Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-
-//Button Listeners
-nextBtn.addEventListener('click', ()=>{
-  if (counter >= carouselImages.length - 1 ) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out'
-  counter++;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-prevBtn.addEventListener('click', ()=>{
-  if (counter <= 0 ) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out'
-  counter--;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-carouselSlide.addEventListener('transitionend', ()=>{
-  if (carouselImages[counter].id === 'lastClone') {
-    carouselSlide.style.transition = 'none'
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  }
-  if (carouselImages[counter].id === 'firstClone') {
-    carouselSlide.style.transition = 'none'
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  }
-});
 }
-
-const hamburger = {
+document.addEventListener("DOMContentLoaded", init);
+/*const hamburger = {
   navToggle: document.querySelector(".burger"),
   nav: document.querySelector(".nav-links"),
 };
 
 function doToggle(e) {
-  console.log(e);
+  //console.log(e);
   e.preventDefault();
   hamburger.navToggle.classList.toggle("expanded");
   hamburger.nav.classList.toggle("expanded");
 }
 
 //Init on DOM Load
-document.addEventListener("DOMContentLoaded", init);
 
-//const links = hamburger.nav.querySelectorAll("nav a");
 
-//hamburger.navToggle.addEventListener("click", doToggle);
-//links.forEach((link) => {
-//  link.addEventListener("click", () => {
-//    hamburger.navToggle.classList.toggle("expanded");
-//    hamburger.nav.classList.toggle("expanded");
-//  });
-//});
+const links = hamburger.nav.querySelectorAll("nav a");
+
+hamburger.navToggle.addEventListener("click", doToggle);
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.navToggle.classList.toggle("expanded");
+    hamburger.nav.classList.toggle("expanded");
+  });
+});*/
