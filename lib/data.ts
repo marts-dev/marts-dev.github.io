@@ -54,7 +54,7 @@ export const experiencesData = [
     location: "(Sognare Systems & Solutions Corp., Philippines",
     description: 
       "I worked on assessing and reviewing customer software application needs and advice th e appropriate solution. I also worked on in-house web application development.",
-    icon: React.createElement(IconSchool),
+    icon: React.createElement(IconDeviceLaptop),
     date: "Sept 2022 - Present",
     technologies: ["Shopify", "Hubspot", "NextJS", "React"]
   },

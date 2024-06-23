@@ -16,9 +16,9 @@ function ExperienceElement({item}: ExperienceItemProps) {
   return (
     <div ref={ref} className="vertical-timeline-element">
       <VerticalTimelineElement
+      className='[&>*]:bg-white [&>*]:dark:bg-black'
         visible={inView}
         contentStyle={{
-          background: "#f3f4f6",
           boxShadow: "none",
           border: "1px solid rgba(0, 0, 0, 0.05)",
           textAlign: "left",
@@ -27,16 +27,14 @@ function ExperienceElement({item}: ExperienceItemProps) {
         contentArrowStyle={{
           borderRight: "0.4rem solid #9ca3af"
         }}
+        dateClassName='text-gray-700 dark:text-white'
         date={item.date}
         icon={item.icon}
-        iconStyle={{
-          background: "white",
-          fontSize: "1.5rem",
-        }}
+        iconClassName='text-gray-700 dark:text-white bg-white  dark:bg-black shadow shadow-black dark:shadow-white'
       >
-        <h3 className='font-semibold capitalize'>{item.title}</h3>
-        <p className='font-normal !mt-0'>{item.location}</p>
-        <p className='!mt-0 !font-normal text-gray-700'>{item.description}</p>
+        <h3 className='font-semibold capitalize text-gray-700 dark:text-white'>{item.title}</h3>
+        <p className='font-normal text-gray-700 dark:text-gray-200 !mt-0'>{item.location}</p>
+        <p className='!mt-0 !font-normal text-gray-700 dark:text-gray-50'>{item.description}</p>
       </VerticalTimelineElement>
     </div>
   )
@@ -49,7 +47,7 @@ export default function Experience() {
       id='experience'
       className="scroll-mt-28 mb-28 sm:mb-40"
     >
-      <VerticalTimeline lineColor=""
+      <VerticalTimeline lineColor="gray"
         animate={true}>
         {
           experiencesData.map((item, index) => (

@@ -17,7 +17,7 @@ export const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "fixed flex flex-col h-screen w-screen items-center justify-center bg-zinc-50 dark:bg-zinc-950 text-slate-950 transition-bg",
+          "fixed flex flex-col h-screen w-screen items-center justify-center bg-zinc-100 dark:bg-zinc-950 text-slate-950 transition-bg",
           className
         )}
         {...props}
@@ -30,12 +30,13 @@ export const AuroraBackground = ({
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
             [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
             [--aurora:repeating-linear-gradient(100deg,var(--green-500)_10%,var(--green-300)_15%,var(--green-300)_20%,var(--violet-200)_25%,var(--green-400)_30%)]
+            [--white-aurora:repeating-linear-gradient(100deg,var(--blue-500)_10%,var(--blue-300)_15%,var(--red-300)_20%,var(--red-200)_25%,var(--red-400)_30%)]
             [background-image:var(--white-gradient),var(--aurora)]
             dark:[background-image:var(--dark-gradient),var(--aurora)]
             [background-size:300%,_200%]
             [background-position:50%_50%,50%_50%]
             filter blur-[10px] invert dark:invert-0
-            after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] 
+            after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--white-aurora)] 
             after:dark:[background-image:var(--dark-gradient),var(--aurora)]
             after:[background-size:200%,_100%] 
             after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
