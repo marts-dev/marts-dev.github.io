@@ -58,5 +58,23 @@ export const experiencesData = [
     date: "Sept 2022 - Present",
     technologies: ["Shopify", "Hubspot", "NextJS", "React"]
   },
-]
+] as const;
 
+export const links = [
+  {
+    name: "Home",
+    hash: "#home",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
+    name: "About",
+    hash: "#about",
+  },
+] as const;
