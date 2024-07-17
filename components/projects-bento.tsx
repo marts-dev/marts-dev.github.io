@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import { BentoGrid, BentoGridItem } from './ui/bento-grid'
-import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn } from '@tabler/icons-react';
+import { IconArrowWaveRightUp, IconClipboardCopy, IconSignature, IconTableColumn, IconWorld } from '@tabler/icons-react';
 import { cn } from '@/utils/cn';
 
 export default function Projects() {
@@ -98,10 +98,10 @@ const SkeletonOne = () => {
 
 const items = [
   {
-    title: "AI Content Generation",
+    title: "AI and Machine Learning",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        AI and Machine learning projects.
       </span>
     ),
     header: <SkeletonOne />,
@@ -109,11 +109,11 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Geospatial Data Analysis",
+    description: "Discover insights about the world we live in.",
     header: <Skeleton />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconWorld className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Art of Design",
@@ -123,9 +123,9 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "The Power of EDA",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "Understand the impact of EDA in data analysis.",
     header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
@@ -136,19 +136,5 @@ const items = [
     header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
 ];
