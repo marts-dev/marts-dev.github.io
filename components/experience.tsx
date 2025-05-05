@@ -15,7 +15,7 @@ function ExperienceElement({item}: ExperienceItemProps) {
   const ref = useRef(null)
   const inView  = useInView(ref);
   return (
-    <div className="vertical-timeline-element">
+    <div ref={ref} className="vertical-timeline-element">
       <VerticalTimelineElement
       className='[&>*]:bg-white [&>*]:dark:bg-black'
         visible={inView}
