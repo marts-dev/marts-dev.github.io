@@ -25,7 +25,6 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  future: { webpack5: true }
 };
 
 export default nextConfig;
