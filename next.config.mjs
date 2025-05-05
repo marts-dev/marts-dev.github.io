@@ -24,6 +24,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+
+  future: { webpack5: true }
 };
 
 export default nextConfig;
