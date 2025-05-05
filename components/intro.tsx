@@ -1,11 +1,14 @@
 "use client";
 
+import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.7);
   return (
     <motion.section
+      ref={ref}
       id='home'
       initial={{ opacity: 0.0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}

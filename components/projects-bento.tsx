@@ -5,10 +5,14 @@ import React from 'react'
 import { BentoGrid, BentoGridItem } from './ui/bento-grid'
 import { IconArrowWaveRightUp, IconClipboardCopy, IconSignature, IconTableColumn, IconWorld } from '@tabler/icons-react';
 import { cn } from '@/utils/cn';
+import Link from 'next/link';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Projects() {
+  const { ref } = useSectionInView("Projects", 0.5);
   return (
     <motion.section
+      ref={ref}
       id='projects'
       initial={{ opacity: 0.0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -18,18 +22,30 @@ export default function Projects() {
         ease: "easeInOut",
       }}
       viewport={{ amount: 0.5 }}
-      className="relative flex flex-col gap-4 items-center justify-center px-4 h-screen bg-transparent"
+      className="relative flex flex-col gap-4 items-center justify-center px-4 h-screen bg-transparent my-28"
     >
       <BentoGrid className="max-w-4xxl mx-auto">
         {items.map((item, i) => (
+          item.href !== "" ? (
+          <Link href={item.href} key={i} className="w-full h-full" target="_blank">
           <BentoGridItem
-            key={i}
             title={item.title}
             description={item.description}
             header={item.header}
             icon={item.icon}
-            className={cn("[&>p:text-lg]", item.className)}
+            className={cn("[&>p:text-lg]", item.className, "h-full")}
           />
+          </Link>
+          ) : (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={cn("[&>p:text-lg]", item.className)}
+            />
+          )
         ))}
       </BentoGrid>
     </motion.section>
@@ -107,13 +123,15 @@ const items = [
     header: <SkeletonOne />,
     className: "md:col-span-1",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    href: "",
   },
   {
     title: "Geospatial Data Analysis",
-    description: "Discover insights about the world we live in.",
+    description: ("Discover insights about the world we live in."),
     header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconWorld className="h-4 w-4 text-neutral-500" />,
+    href: "https://colab.research.google.com/drive/14wi79X_sBjzHsMKKJm1M60Hk7NfJB4aQ?usp=drive_link",
   },
   {
     title: "The Art of Design",
@@ -121,6 +139,7 @@ const items = [
     header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    href: "",
   },
   {
     title: "The Power of EDA",
@@ -129,6 +148,7 @@ const items = [
     header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    href: "",
   },
   {
     title: "The Pursuit of Knowledge",
@@ -136,5 +156,6 @@ const items = [
     header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    href: "",
   },
 ];

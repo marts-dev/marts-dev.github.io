@@ -15,7 +15,7 @@ export default function NotFound() {
           How you got here is a mystery. But you can click the button below
           to go back to the homepage.
         </p>
-        <Link className="transition-all focus:scale-110 hover:scale-110" href="/">Return Home</Link>
+        <Link className="transition-all focus:scale-110 hover:scale-110 text-gray-700 dark:text-white" href="/">Return Home</Link>
       </div>
     </section>
   )

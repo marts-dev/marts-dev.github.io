@@ -1,7 +1,8 @@
 "use client";
 
 import { experiencesData } from '@/lib/data';
-import { useInView } from 'framer-motion';
+import { useSectionInView } from '@/lib/hooks';
+import { motion, useInView } from 'framer-motion';
 import React, { useRef } from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -14,7 +15,7 @@ function ExperienceElement({item}: ExperienceItemProps) {
   const ref = useRef(null)
   const inView  = useInView(ref);
   return (
-    <div ref={ref} className="vertical-timeline-element">
+    <div className="vertical-timeline-element">
       <VerticalTimelineElement
       className='[&>*]:bg-white [&>*]:dark:bg-black'
         visible={inView}
@@ -41,11 +42,20 @@ function ExperienceElement({item}: ExperienceItemProps) {
 }
 
 export default function Experience() {
-
+  const { ref } = useSectionInView("Experience", 0.3);
   return (
-    <section
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0.0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: 0.3,
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+      viewport={{ amount: 0.3 }}
       id='experience'
-      className="scroll-mt-28 mb-28 sm:mb-40"
+      className="relative flex flex-col gap-4 items-center justify-center h-auto sm:mb-40"
     >
       <VerticalTimeline lineColor="gray"
         animate={true}>
@@ -55,6 +65,6 @@ export default function Experience() {
           ))
         }
       </VerticalTimeline>
-    </section>
+    </motion.div>
   )
 }
