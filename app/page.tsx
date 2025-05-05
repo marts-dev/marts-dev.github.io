@@ -5,7 +5,6 @@ import About from "@/components/about";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects-bento";
 import Experience from "@/components/experience";
-import "./globals.css";
 
 export default function Home() {
   return (
